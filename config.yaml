@@ -1,0 +1,25 @@
+telegram:
+  token: "${TELEGRAM_BOT_TOKEN}"
+  channel: "${TELEGRAM_CHANNEL}"
+
+thresholds:
+  cpu: 90
+  ram: 85
+  disk: 80
+  max_vms: 10
+
+ssl:
+  domains:
+    - "google.com"
+    - "microsoft.com"
+  min_days: 30
+
+ml:
+  model_path: "models/failure_model.pkl"
+  training_data: "data/cpu_metrics.csv"
+  features: ["cpu_load", "ram_usage"]
+  threshold: 0.7
+
+ntp_server: "pool.ntp.org"
+smtp_server: "smtp.gmail.com"
+smtp_port: 587
